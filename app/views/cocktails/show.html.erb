@@ -16,10 +16,12 @@
 <div class="container">
   <h4>Ajouter des ingrédients</h4>
   <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= collection_select :ingredient, :name, Ingredient.select(:name).uniq.order('name ASC'), :name, :name, {:prompt => 'Select a ingredient'},{:name => "name_search"} %>
+  <%= f.input :ingredient_id, collection: @ingredients %>
   <%= f.input :quantity, label: 'Quantité', error: 'La quantitée est obligatoire' %>
   <%= f.input :description, label: 'Description', error: 'La description est obligatoire' %>
   <%= f.button :submit %>
   <% end %>
 
 </div>
+
+
