@@ -1,0 +1,25 @@
+<h1>Cocktail X</h1>
+<h2>Voici la listes de tout nos cocktails</h2>
+
+<div class="container">
+  <h3>Nom du cocktail : <%= @cocktail.name %></h3>
+  <ul>
+    <h4>Ingredients : <% @cocktail.doses.each do |dose| %></h4>
+    <li><%= dose.ingredient.name %> : (<%= dose.quantity %><%= dose.description %>)</li>
+    <% end %>
+  </ul>
+</div>
+
+
+<%= link_to "Retour aux cocktails", cocktails_path %>
+
+<div class="container">
+  <h4>Ajouter des ingrédients</h4>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= collection_select :ingredient, :name, Ingredient.select(:name).uniq.order('name ASC'), :name, :name, {:prompt => 'Select a ingredient'},{:name => "name_search"} %>
+  <%= f.input :quantity, label: 'Quantité', error: 'La quantitée est obligatoire' %>
+  <%= f.input :description, label: 'Description', error: 'La description est obligatoire' %>
+  <%= f.button :submit %>
+  <% end %>
+
+</div>
