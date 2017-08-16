@@ -1,5 +1,6 @@
 <h1>Ajouter un Cocktail</h1>
 <%= simple_form_for @cocktail do |f| %>
   <%= f.input :name, label: 'Le nom de votre cocktail', error: 'Le nom est obligatoire' %>
+  <%= f.input :photo, as: :attachinary %>
   <%= f.button :submit %>
 <% end %>

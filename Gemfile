@@ -8,6 +8,9 @@ end
 # Pour les seeds
 gem 'faker'
 gem 'figaro'
+gem 'cloudinary', '1.1.7'
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
 # Lewagon asset
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
