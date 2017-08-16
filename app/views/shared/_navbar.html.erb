@@ -1,45 +1,37 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png" %>
-  <% end %>
+  <a href="/" class="navbar-wagon-brand">
+    <img src="http://images4.wikia.nocookie.net/__cb20110222055952/logopedia/images/6/68/Marc_Dorcel_logo.png" alt="logo">
+  </a>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <!-- Links -->
-    <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Trips</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
 
-    <!-- Avatar with dropdown menu -->
+    <!-- Profile picture with dropdown list -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
-        <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+        <img src="http://i.makeagif.com/media/8-11-2017/v6CN9i.gif" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
-            <% end %>
-          </li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Log Out</a></li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- Dropdown list appearing on mobile only -->
+  <!-- Dropdown appearing on mobile only -->
   <div class="navbar-wagon-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li><a href="#">Host</a></li>
+        <li><a href="#">Trips</a></li>
+        <li><a href="#">Messagese</a></li>
       </ul>
     </div>
   </div>

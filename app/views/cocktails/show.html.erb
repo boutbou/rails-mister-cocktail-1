@@ -16,7 +16,8 @@
 <div class="container">
   <h4>Ajouter des ingrédients</h4>
   <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :ingredient_id, collection: @ingredients %>
+  <%= f.error_notification message: @dose.errors.messages[:ingredient].first %>
+  <%= f.input :ingredient_id, collection: Ingredient.all %>
   <%= f.input :quantity, label: 'Quantité', error: 'La quantitée est obligatoire' %>
   <%= f.input :description, label: 'Description', error: 'La description est obligatoire' %>
   <%= f.button :submit %>

@@ -7,6 +7,7 @@ end
 
 # Pour les seeds
 gem 'faker'
+gem 'figaro'
 # Lewagon asset
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
